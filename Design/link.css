@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    text-decoration: none;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+.nav {
+    background: #170733;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.nav .logo {
+    margin: 1rem;
+    letter-spacing: 5px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    box-shadow: 2px 1px 3px hsl(266, 75%, 26%);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-menu li a {
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+    background: #2d123d;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+    background: #2d123d;
+}
+
+.burger {
+    cursor: pointer;
+    margin: 15px 7px 15px 7px;
+    display: none;
+}
+
+.burger div {
+    background: rgb(255, 255, 255);
+    height: 4px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 25px;
+}
+
+.icon {
+    color: white;
+    padding: 5px;
+    margin: 0 5px 0 7px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.main {
+    background: rgb(255, 255, 255);
+    margin: 140px 25px 140px 25px;
+    box-shadow: 2px 1px 3px #d9d9d9;
+}
+
+.title {
+    font-size: 2rem;
+    margin: 70px 20px;
+    text-align: center;
+    color: #1b1b1b;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.img {
+    background-size: cover;
+    width: 100%;
+    height: 720px;
+    padding: 50px;
+}
+
+.p-link {
+    text-decoration: none;
+    color: #1b1b1b;
+}
+
+.texts {
+    margin: 0 auto;
+    width: 70%;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #111111;
+    line-height: 30px;
+}
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 260px;
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+
+.h2-title {
+    font-size: 2rem;
+    color: #170733;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.footer {
+    background: #150530;
+    width: 100%;
+    padding: 50px;
+    color: white;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .container h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.footer .container p {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+input[type='email'] {
+    width: 30%;
+    padding: 5px;
+    font-size: 1.3rem;
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+    border: transparent;
+    margin: 20px 0 20px 0;
+}
+
+input[type='submit'] {
+    padding: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+    border: transparent;
+    background: #8334C1;
+    color: white;
+}
+
+input[type='submit']:hover {
+    background: #913ad4;
+}
+
+.footer .container .copyright {
+    margin-top: 50px;
+    font-size: 1.6rem;
+}
+
+@media (max-width:800px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-menu {
+        width: 100%;
+        flex-direction: column;
+        display: none;
+    }
+    .nav-menu li a {
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s ease-in;
+    }
+    .burger {
+        position: absolute;
+        top: 0;
+        right: .30rem;
+        display: block;
+    }
+    .nav-menu.active {
+        display: block;
+    }
+    .main {
+        z-index: -1;
+        margin: 140px 25px 140px 25px;
+    }
+    .box {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .box-1 {
+        width: 100%;
+        padding: 30px;
+    }
+    .img {
+        object-fit: cover;
+        width: 100%;
+        height: 350px;
+    }
+    .texts {
+        width: 70%;
+    }
+    .title {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+    .lists {
+        margin: 0 auto;
+        width: 60%;
+        font-size: 1rem;
+        padding: 0 5px 0 5px;
+    }
+    .footer .container p {
+        font-size: .75rem;
+        font-weight: 400;
+    }
+}
